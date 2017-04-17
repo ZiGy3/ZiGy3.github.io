@@ -1,0 +1,55 @@
+.carousel-section
+  position: relative
+  +size(100% 800px)
+
+  .carousel
+    +size(100%)
+
+    .carousel-unit
+      width: 500px      
+      text-align: center
+      margin: auto
+      padding-top: 80px
+      display: none
+
+      &.active-carousel
+        +display(block)
+
+      h2
+        font:
+          family: "Open Sans"
+          size: 50px
+        margin-bottom: 60px
+
+      ul
+        margin: 0
+        padding: 0
+
+        li
+          font:
+            size: 24px
+          transition: all 0.1s ease-in-out
+          
+          &:hover
+           color: $black
+           font-size: 30px
+
+          a
+            text-decoration: none
+            color: $black
+            size: 24px
+        
+
+
+  .carousel-controls
+    & > div
+      +size(60px)
+      cursor: pointer
+
+    .carousel-control-next
+      +position(absolute, 50% 10% null null)
+      +transform(translate(-50%, -50%))
+
+    .carousel-control-prev
+      +position(absolute, 50% null null 10%)
+      +transform(translate(-50%, -50%))
