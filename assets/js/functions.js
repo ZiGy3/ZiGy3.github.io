@@ -44,5 +44,20 @@ $(document).ready(function() {
     }
   });
 
+  var offset = 500;
+  var duration = 250;
 
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > offset) {
+      $("#topButton").fadeIn(duration);
+    } else {
+      $("#topButton").fadeOut(duration);
+    }
+  });
+
+  $("#topButton").click(function(event) {
+    event.preventDefault();
+    $("html, body").animate({scrollTop: 0}, duration);
+    return false;
+  })
 });

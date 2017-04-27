@@ -680,11 +680,15 @@ header {
       border-radius: 10px;
       background: rgba(255, 255, 255, 0.6); }
 
+#header {
+  z-index: 99; }
+
 footer {
   height: 200px;
   background: url(../img/footer-img.jpg) center 30%;
   background-size: cover;
-  box-shadow: 0px 0px 20px #3d3d3d; }
+  box-shadow: 0px 0px 20px #3d3d3d;
+  position: relative; }
 
 .logo {
   float: left;
@@ -706,6 +710,18 @@ nav {
     font-family: "Fira Sans";
     font-weight: 400;
     color: #111; }
+
+#credits {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px 0 0 0;
+  color: black;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 20px; }
 
 .carousel-section {
   position: relative;
@@ -919,6 +935,20 @@ nav {
     background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.75), transparent);
     width: 80%;
     margin: 50px auto; }
+
+#topButton {
+  height: 60px;
+  width: 60px;
+  padding: 0;
+  border: 0;
+  background: white;
+  position: fixed;
+  top: 50px;
+  left: 10px;
+  border-radius: 50%;
+  display: none; }
+  #topButton:hover {
+    background: #7FDBFF; }
 
 .sub-page-header {
   height: 400px;
